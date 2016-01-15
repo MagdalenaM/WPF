@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>MVGH</title>
+
+    <!-- Bootstrap -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/main.css" rel="stylesheet">
+    <!-- JQUERY UI -->
+    <link rel="stylesheet" href="./css/jquery-ui.min.css">
+    <!-- Font Awesome -->
+    <link href="./css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-fixed-top navbar-inverse">
+    <a href="#main" class="sr-only sr-only-focusable">Skip to main content</a>
+    	<div class="nav-logo">
+    	<a href="index.html"><img alt="Logo" src="./img/Logo.png" class="logoNav"/></a>
+        </div>
+        
+      <div class="container">
+      	
+        <div class="navbar-header">
+          <a class="navbar-brand schrift" href="index.html"><p>Musikverein Groß Haselbach</p></a>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div style="height: 0.8px;" aria-expanded="false" id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="chronik.html">Chronik</a></li>
+            <li class="active"><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </div><!-- /.nav-collapse -->
+        </div>
+      </div><!-- /.container -->
+    </nav>
+    
+    
+    <div id="main">
+    	<div class="row">
+        	<div class="col-xs-12 col-md-12">
+            	<h1>Kontakt</h1>
+            </div>
+        </div>
+    	<div class="row contact">
+        	<div class="col-xs-12 col-md-2"></div>
+  			<div class="col-xs-12 col-md-2">
+    			<div class="thumbnail">
+      				<img src="./img/weber_josef.JPG" alt="Josef Weber">
+      				<div class="caption">
+        				<h4>Kapellmeister<br/>Josef Weber</h4>
+        				<p>josefweber1@gmx.at<br/>0664/88551552</p>
+      				</div>
+    			</div>
+  			</div>
+            <div class="col-xs-12 col-md-2">
+    			<div class="thumbnail">
+      				<img src="./img/franta_erwin.JPG" alt="Erwin Franta">
+      				<div class="caption">
+        				<h4>Obmann <br/>Erwin Franta</h4>
+        				<p>erwin.franta@gmx.at<br/>0664/2834714</p>
+      				</div>
+    			</div>
+  			</div>
+            <div class="col-xs-12 col-md-2">
+    			<div class="thumbnail">
+      				<img src="./img/gari_hans.JPG" alt="Johann Gari">
+      				<div class="caption">
+        				<h4>Kassier <br/>Johann Gari</h4>
+        				<p>johann.gari@post.at<br/>0664/5870740</p>
+      				</div>
+    			</div>
+  			</div>
+            <div class="col-xs-12 col-md-2">
+    			<div class="thumbnail">
+      				<img src="./img/karin.JPG" alt="Karin Kaltenböck">
+      				<div class="caption">
+        				<h4>Jugendreferentin<br/>Karin Kaltenböck</h4>
+        				<p>karin.kaltenboeck@gmail.com<br/>0664/6485527</p>
+      				</div>
+    			</div>
+  			</div>
+            <div class="col-xs-12 col-md-2"></div>
+		</div>
+    
+    </div>
+    <footer>
+    	<div class="row">
+        	<div class="col-xs-12 col-md-4">
+        		<p>&copy; 2016 Musikverein Groß Haselbach, Alle Rechte vorbehalten</p>
+        		<p>Groß Haselbach 62, 3900 Schwarzenau, AUSTRIA</p>
+            </div>
+            <div class="col-xs-12 col-md-4 mitte">
+            	<a href="https://www.facebook.com/MusikvereinGrosshaselbach/"><i class="fa fa-facebook-official fa-2x"></i></a>
+                <a href="https://www.youtube.com/channel/UCD-SXuWxZuo4DB-UaOUuIGw"><i class="fa fa-youtube fa-2x"></i></a>
+            </div>
+            <div class="col-xs-12 col-md-4">
+            	<p class="footer-right">Impressum</p>
+            </div>
+    </footer>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="./js/jquery-1.7.2.min.js"></script>
+ 	<script src="./js/jquery-ui.min.js"></script>
+    
+      <script>
+  $(function() {
+	  
+	  $( document ).ready(function() {
+		  	runEffect();
+		});
+    // run the currently selected effect
+    function runEffect() {
+	  $( ".contact").fadeIn(1000);
+    };
+ 
+    
+    
+  });
+  </script>
+  </body>
+</html>
