@@ -19,6 +19,7 @@
 		padding-top: 1% !important;
 	}
 
+//definition aller überschriften und wichtigen textteile
 h1{
 	color: @darkViolett !important;
 }
@@ -51,25 +52,26 @@ p{
 }
 .navbar{
 	background-color: @violett;
+	height: 110px;
 	.active{
 		background-color: @darkViolett !important;
-	}
-	.container{
-		height: 100%;
 	}
 }
 .nav-logo{
 	float: left;
-	margin: auto;
-	width: 100%;
+	height: 110px;
+	width: 99px;
 	
 	img{
 		height: 100px;
 		margin: 5px;
 	}
 }
+.schrift{
+	margin: 30px 0;
+}
 .navbar-header{
-	margin-top: -50px;
+	width: 100%;
 }
 .navbar-collapse{
 	float: right;
@@ -104,6 +106,11 @@ footer{
 .carousel{
 	padding-top: 5%;
 }
+.carousel-inner{
+	img {
+		width: 100%;
+	}
+}
 
 /****mixins für headings****/
 .fontMobile(){
@@ -123,7 +130,7 @@ footer{
 		font-size: 12px;
 	}
 	p{
-		font-size: 10px;
+		font-size: 11px;
 	}
 }
 .fontDesktop(@size: 2px){
@@ -146,39 +153,73 @@ footer{
 		font-size: @size*7;
 	}
 }
+/***** nav in mobilder version ****/
 .navMobile(){
 	#navbar{
 		float: right;
 	}
+	.navbar{
+		height: auto;
+		min-height: 50px;
+	}
 	.navbar-brand{
 		p{
-			font-size: 16px;
+			font-size: 14px;
 			margin-left: 0;
 			margin-right: 0;
 		}
 	}
+	.navbar-header{
+		margin: 0 !important;
+	}
 	.nav-logo img{
 		height: 40px;
+		margin: 0 !important;
+	}
+	.nav-logo{
+		height: 40px;
+		width: 36px;
+	}
+	.schrift{
+		margin: 0;
+		padding: 0;
+	}
+	.container{
+		padding: 5px;
 	}
 }
+/**** jqery ui accordion (chronik page) in mobiler version ***/
+.accordionMobile(){
+	.ui-accordion-header{
+		font-size: 13px !important;
+	}
+	.caption{
+		font-size: 10px !important;
+	}
+	.accordion-block{
+		max-height: 160px !important;
+	}
+}
+/***** Smartphone variante ****/
 @media (max-width: @screen-xs-min) {
 	.fontMobile();
 	.navMobile();
+	.accordionMobile();
 	#main{
 		padding-top: @mainPaddingMobile;
 	}
 	.carousel{
-		padding-top: 35%;
+		padding-top: 20%;
 	}
 	footer{
 		text-align: center !important;
 	}
-	
 }
+/***** Desktop Variante ****/
 @media (min-width: @screen-mobile-max) {
 	.fontDesktop();
 	#navbar{
-		float: left;
+		float: right;
 	}
 	.footer-right{
 		float: right;
@@ -186,10 +227,9 @@ footer{
 }
 
 /*************
-* NEWS
+* NEWS page
 *************/
 .panel {
-
 	img{
 		width: 100%;
 	}
@@ -199,30 +239,30 @@ footer{
 }
 
 /*************
-* CONTACT
+* CONTACT page
 *************/
-
-
 .contact{
   	display: none; 	
 }
 
-/***********
-* CHRONIK
-************/
+/**************
+* CHRONIK page
+***************/
 .p-block{
 	text-align: justify;
 }
 .accordion-img{
-	
 		width: 100%;
-	
 }
 .caption{
 	font-size: 12px;
 }
+/*** mixin für Einstellung der Anzeigenhöhe des Accordions ****/
+.accordionHeight(@height: 230px){
+	max-height: @height !important;
+}
 .accordion-block{
-	height: auto !important;
+	.accordionHeight();
 }
 .ui-accordion-header{
 	background-color: lighten(@lightGrey, 30%) !important;
@@ -232,12 +272,7 @@ footer{
 		color: white;
 	}
 }
-#accordion-resizer {
-    padding: 10px;
-    width: 350px;
-    height: 220px;
-}
 
-  .active{
+.active{
   	background-color: @lightGrey !important;
 }
